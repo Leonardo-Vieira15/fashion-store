@@ -1,0 +1,9 @@
+@import "light";
+:host{
+  .stripe {
+    background-color: $secondary;
+    color: $thidiary;
+    text-align: center;
+    padding: 5px;
+  }
+}

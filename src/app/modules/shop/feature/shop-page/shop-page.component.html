@@ -1,0 +1,24 @@
+
+<filters/>
+<div class="content">
+    <div class="flex-container flex-center flex-middle">
+      <a href="shop">
+        <img src="assets/images/sale.png" alt="">
+      </a>
+    </div>
+  <div class="top flex-container flex-spaced flex-middle">
+    <p>
+      <ng-container *ngIf="category !== 'none'">
+        Clothes for {{category.toUpperCase()}}
+      </ng-container>
+    </p>
+    <div class="search flex-container flex-center flex-middle">
+      <input type="text" name="" id="">
+      <fa-icon [icon]="['fas', 'magnifying-glass']"></fa-icon>
+    </div>
+  </div>
+
+  <div class="items flex-container flex-spaced">
+    <shop-item *ngFor="let shopItem of this.shopItems" [item]="shopItem" />
+  </div>
+</div>

@@ -1,0 +1,47 @@
+@import "light";
+
+:host{
+  display: block;
+  border-right: 1px solid #3333;
+  h3{
+    margin: 20px;
+    width: fit-content;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 75%;
+      background-color: $secondary;
+    }
+  }
+  ul {
+    list-style-type: none;
+    li {
+      display: flex;
+      label {
+        display: block;
+        padding-left: 15px;
+      }
+    }
+  }
+  .sizes{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      width: 40px;
+      height: 40px;
+      border: 1px solid $primary;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: .85rem;
+
+    }
+  }
+}

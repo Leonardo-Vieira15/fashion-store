@@ -1,0 +1,47 @@
+:host{
+  display: block;
+  nav {
+    padding: 20px 6%;
+    .logo {
+      font-size: 3rem;
+      a {
+        text-decoration: none;
+      }
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li{
+        padding: 20px;
+        font-weight: 300;
+
+        fa-icon {
+          cursor: pointer;
+        }
+        a {
+          display: block;
+          text-decoration: none;
+          position: relative;
+          padding-bottom: 3px;
+          &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #333;
+            width: 0%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+          }
+
+          &:hover{
+            &::after {
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
